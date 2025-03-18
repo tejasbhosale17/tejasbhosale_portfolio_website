@@ -1,0 +1,187 @@
+.navbar-main {
+  background-color: #f45926;
+  height: 29vh;
+}
+
+/* Navbar Row */
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+}
+
+/* Logo Name */
+.nav-name {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Metropolis, sans-serif";
+  color: var(--nav-name-color);
+  transition: color 0.3s ease-in-out;
+}
+
+/* Right Menu */
+.right-menu {
+  display: flex;
+  margin-right: 3rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Toggle Button */
+.theme-toggle {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border: 2px solid var(--text-color);
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Menu Icon */
+.menu-icon {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-color) ;
+}
+
+.menu-icon:hover {
+  opacity: 0.8;
+}
+
+/* Light & Dark Mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+--nav-name-color: #1b1b1b; 
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+--nav-name-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .nav-name {
+    font-size: 1.2rem;
+  }
+
+  .right-menu {
+    gap: 0.5rem;
+  }
+
+  .theme-toggle {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+/* Theme Switch */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 30px;
+}
+
+/* Hide Default Checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider Background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text-color);
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+/* Slider Circle */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 94%;
+  width: 59%;
+  left: 0.13rem;
+  bottom: 0.05rem;
+  top: 0.05rem;
+  background-color: var(--bg-color);
+  transition: 0.4s;
+  border-radius: 1rem 1rem 1rem 1rem;
+  /* overflow: hidden; */
+}
+
+/* Move Slider When Checked */
+input:checked + .slider {
+  background-color: #ffffff;
+}
+
+/* Move the circle (toggle animation) */
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* Icons */
+.icon {
+  position: absolute;
+  font-size: 21px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.4s ease-in-out;
+}
+
+/* Sun (Left) */
+.sun {
+  left: 3rem;
+  color: #ffffff;
+}
+
+/* Moon (Right) */
+.moon {
+  right: 3.2rem;
+  color: #1d1d1d;
+}
+
+/* Hide the inactive icon */
+input:checked + .slider .sun {
+  opacity: 0;
+}
+
+input:not(:checked) + .slider .moon {
+  opacity: 0;
+}
+
