@@ -1,0 +1,70 @@
+.profile-div{
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  display: flex;
+  position: absolute;
+  inset: 0% 0% 0% auto;
+  overflow: visible;
+}
+.profile-div img{
+  max-width: none;
+  min-height: 100%;
+  overflow: visible;
+  z-index: 2000;
+  pointer-events: none;
+}
+.heading{
+  font-variation-settings: "wght" 745, "wdth" 141, "opsz" 76, "XOPQ" 106, "YOPQ" 106;
+  font-size: 5vw;
+  font-family: "Roboto Flex", sans-serif;
+  text-transform: uppercase;
+  margin-left: 4vw;
+  margin-top: 4vh;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.09rem;
+}
+.open-work-part{
+  white-space: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 0;
+  height: 0;
+  font-size: .9vw;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: auto;
+
+}
+.div-block-open{
+  justify-content: center;
+  align-items: center;
+  width: 6.4em;
+  height: 6.4em;
+  font-size: .9vw;
+  display: flex;
+}
+
+.div-block-210 {
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  padding: .2vw 6em .15vw;
+  font-weight: 700;
+  display: flex;
+  transform: rotate(-45deg);
+}
+
+
+
+
+/* Responsive */
+@media only screen and (max-width: 991px){
+  .profile-div img {
+    min-height: 77%;
+    margin-top: -14.5vh;
+}
+}

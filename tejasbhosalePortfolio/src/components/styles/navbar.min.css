@@ -1,10 +1,12 @@
 .navbar-main {
   background-color: #f45926;
-  height: 29vh;
+  height: 30vh;
+  display: grid;
+  z-index: 1000;
 }
 
 /* Navbar Row */
-.row {
+.nav-row {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -16,10 +18,12 @@
 
 /* Logo Name */
 .nav-name {
-  margin-left: 1rem;
+  margin-left: 5vw;
   font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Metropolis, sans-serif";
+  /* font-weight: bold; */
+  font-family: "K2D", sans-serif;
+  font-weight: 800;
+  font-style: normal;
   color: var(--nav-name-color);
   transition: color 0.3s ease-in-out;
 }
@@ -27,8 +31,8 @@
 /* Right Menu */
 .right-menu {
   display: flex;
-  margin-right: 3rem;
-  gap: 1rem;
+  margin-right: 5vw;
+  gap: 2vw;
   align-items: center;
   justify-content: flex-end;
 }
@@ -67,12 +71,12 @@
 /* Light & Dark Mode */
 :root {
   --bg-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #1d1d1d;
 --nav-name-color: #1b1b1b; 
 }
 
 [data-theme="dark"] {
-  --bg-color: #121212;
+  --bg-color: #1d1d1d;
   --text-color: #ffffff;
 --nav-name-color: #ffffff;
 }
@@ -83,25 +87,6 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: row;
-  }
-
-  .nav-name {
-    font-size: 1.2rem;
-  }
-
-  .right-menu {
-    gap: 0.5rem;
-  }
-
-  .theme-toggle {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-  }
-}
 /* Theme Switch */
 .theme-switch {
   position: relative;
@@ -185,3 +170,90 @@ input:not(:checked) + .slider .moon {
   opacity: 0;
 }
 
+/* --------------------------------------------------- */
+/* Hamburger Menu */
+.menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger Lines */
+.hamburger_9_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger_9_line {
+  width: 40px;
+  height: 2px;
+  background: var(--text-color);
+  transition: all 0.3s;
+}
+
+/* Hamburger Open Animation */
+.menu-button.open .hamburger_9_line:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.open .hamburger_9_line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open .hamburger_9_line:last-child {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* -------------------------------------------------------------------- */
+
+
+.intro-section{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  position: absolute;
+  align-items: start;
+ }
+
+.intro-greeting{
+  font-family: "K2D", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  margin: 0 0 0 5vw;
+  font-size: 1.8rem;
+}
+
+
+
+
+/* Responsive */
+@media only screen and (max-width: 900px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .nav-name {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+  .intro-column{
+    margin-top: 3rem;
+  }
+
+  .intro-greeting{
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .right-menu {
+    gap: 0.5rem;
+  }
+
+  .theme-toggle {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

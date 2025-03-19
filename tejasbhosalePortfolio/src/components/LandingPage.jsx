@@ -1,32 +1,35 @@
+import profileImg from "../assets/profile-img-1.png";
+
+import "./styles/landingPage.min.css";
 const LandingPage = () => {
   return (
     <div className="landing-main">
-      <div className="px-4 py-5 my-5 text-center">
-        <img
-          className="d-block mx-auto mb-4"
-          src="/docs/5.3/assets/brand/bootstrap-logo.svg"
-          alt=""
-          width="72"
-          height="57"
-        />
-        <h1 className="display-5 fw-bold text-body-emphasis">Centered hero</h1>
-        <div className="col-lg-6 mx-auto">
-          <p className="lead mb-4">
-            Quickly design and customize responsive mobile-first sites with
-            Bootstrap, the world’s most popular front-end open source toolkit,
-            featuring Sass variables and mixins, responsive grid system,
-            extensive prebuilt components, and powerful JavaScript plugins.
-          </p>
-          <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
-              Primary button
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-secondary btn-lg px-4"
-            >
-              Secondary
-            </button>
+      <div className="hero-section" style={{ borderBottom: "1px solid grey" }}>
+        <div className="container tag-line">
+          <div className="row">
+            <div className="col-6">
+              <h1 class="heading">
+                The only
+                <br />
+                Tech Talent
+                <br />
+                You Need
+              </h1>
+            </div>
+            <div className="open-work-part">
+              <div className="div-block-open">
+                <div data-theme="invert" className="div-block-210">
+                  <span className="text-block">Open to work</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-6 profile-img-section">
+              {/* <div className="container "> */}
+              <div className="profile-div">
+                <img src={profileImg} alt="Profilr Image here" />
+              </div>
+              {/* </div> */}
+            </div>
           </div>
         </div>
       </div>
