@@ -217,6 +217,7 @@ input:not(:checked) + .slider .moon {
   padding: 1rem;
   position: absolute;
   align-items: start;
+  color: white;
  }
 
 .intro-greeting{
@@ -241,7 +242,7 @@ input:not(:checked) + .slider .moon {
     margin-left: 0;
   }
   .intro-column{
-    margin-top: 3rem;
+    margin-top: 0;
   }
 
   .intro-greeting{

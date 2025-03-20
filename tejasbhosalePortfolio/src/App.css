@@ -1,5 +1,5 @@
 .home{
-  background-color: #1d1d1d;
-  color: #EEE5DA;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   display: grid;
 }
