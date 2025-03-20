@@ -1,0 +1,32 @@
+.scrolling_wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1d1d1d;
+  position: relative;
+}
+
+.scrolling_text_container {
+  display: flex;
+  width: max-content;
+  animation: scrollAnimation linear infinite;
+}
+
+.scrolling_text {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 8rem;
+  font-weight: bold;
+  white-space: nowrap;
+  display: flex;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+/* Keyframes for smooth infinite scrolling */
+@keyframes scrollAnimation {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
