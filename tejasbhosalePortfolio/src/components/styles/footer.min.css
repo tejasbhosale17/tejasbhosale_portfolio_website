@@ -1,0 +1,49 @@
+/* Footer container */
+.footer {
+  background-color: #f45926;
+  color: #1d1d1d;
+  padding: 20px 0; /* Padding top and bottom */
+  text-align: center; /* Center-align text */
+  font-family: Arial, sans-serif; /* Use a clean font */
+  width: 100%; /* Full width */
+  position: relative; /* Relative positioning */
+  bottom: 0; /* Stick to the bottom */
+}
+
+/* Footer content container */
+.footer-content {
+  max-width: 100vw; /* Limit width for larger screens */
+  /* margin: 0 auto;  */
+  padding: 0 20px; /* Add padding on smaller screens */
+}
+
+/* Footer text */
+.footer-text {
+  margin: 0; /* Remove default margin */
+  font-size: 1rem; /* Base font size */
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Footer link */
+.footer-link {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer-link:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-text {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-text {
+    font-size: 0.8rem; /* Even smaller font size for very small screens */
+  }
+}
