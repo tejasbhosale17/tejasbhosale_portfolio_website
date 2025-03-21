@@ -2,3 +2,7 @@ body{
   margin: 0;
   padding: 0;
 }
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body takes full width */
+}

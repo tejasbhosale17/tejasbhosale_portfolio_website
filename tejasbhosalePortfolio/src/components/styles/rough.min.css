@@ -1,32 +1,54 @@
-.scrolling_wrapper {
-  width: 100%;
-  overflow: hidden;
-  background-color: #1d1d1d;
-  position: relative;
-}
-
-.scrolling_text_container {
+/* Global styles for .scroller */
+.scroller {
   display: flex;
-  width: max-content;
-  animation: scrollAnimation linear infinite;
-}
-
-.scrolling_text {
-  font-family: "Roboto Flex", sans-serif;
-  font-size: 8rem;
-  font-weight: bold;
   white-space: nowrap;
-  display: flex;
-  text-transform: capitalize;
-  color: #ffffff;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+  will-change: transform;
 }
 
-/* Keyframes for smooth infinite scrolling */
-@keyframes scrollAnimation {
-  from {
-      transform: translateX(0%);
+.scroller span {
+  flex-shrink: 0;
+  padding: 0 10px; /* Add padding to avoid text overlap */
+}
+
+/* Unique styles for each section */
+.welcome-scroller {
+  font-size: 6rem; /* Larger font size for WELCOME */
+}
+
+.about-scroller {
+  font-size: 4rem; /* Medium font size for ABOUT */
+}
+
+.why-me-scroller {
+  font-size: 3rem; /* Smaller font size for WHY ME */
+}
+
+@media (max-width: 480px) {
+  .welcome-scroller {
+    font-size: 3rem;
   }
-  to {
-      transform: translateX(-50%);
+  .about-scroller {
+    font-size: 2rem;
+  }
+  .why-me-scroller {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome-scroller {
+    font-size: 8rem;
+    line-height: 10rem;
+  }
+  .about-scroller {
+    font-size: 5rem;
+  }
+  .why-me-scroller {
+    font-size: 4rem;
   }
 }
