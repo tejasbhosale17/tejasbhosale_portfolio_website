@@ -1,6 +1,7 @@
 import profileImg from "../assets/profile-img-2.png";
 import ScrollFloat from "./IntroScrollReveal";
 import IntroScrollReveal from "./IntroScrollReveal";
+import ProjectsCarousel from "./ProjectsCarousal";
 import Rough, { WelcomeScrollVelocity } from "./Rough";
 import ScrollVelocity from "./ScrollVelocity";
 
@@ -67,6 +68,9 @@ const LandingPage = () => {
           scrollerClassName="scroller"
           direction="left"
         />
+      </div>
+      <div className="projects-section">
+        <ProjectsCarousel />
       </div>
       <div className="intro-reveal-section">
         {/* <IntroScrollReveal

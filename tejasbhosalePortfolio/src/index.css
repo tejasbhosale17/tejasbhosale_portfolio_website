@@ -3,6 +3,6 @@ body{
   padding: 0;
 }
 body, html {
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
   width: 100%; /* Ensure the body takes full width */
 }

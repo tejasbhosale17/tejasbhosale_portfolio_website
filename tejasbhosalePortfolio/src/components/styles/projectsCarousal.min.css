@@ -1,0 +1,83 @@
+/* Container for the section */
+.why_me_animation_trigger {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+/* Animation container */
+.why_me_animation_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card styling */
+.div-block-161 {
+  background-color: #fff; /* Light theme */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.div-block-161:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark theme */
+.div-block-161[data-theme="dark"] {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Heading wrapper */
+.why_heading_wrapper {
+  text-align: center;
+}
+
+/* Lottie animation container */
+.lottie-animation {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* Text styling */
+.paragraph_main--tw1 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 10px 0;
+  color: #333; /* Default text color */
+}
+
+.div-block-161[data-theme="dark"] .paragraph_main--tw1 {
+  color: #fff; /* Text color for dark theme */
+}
+
+/* Numbered indicator */
+.div-block-166 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #007bff; /* Blue color for numbers */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why_me_animation_container {
+    flex-direction: column;
+  }
+
+  .div-block-161 {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
