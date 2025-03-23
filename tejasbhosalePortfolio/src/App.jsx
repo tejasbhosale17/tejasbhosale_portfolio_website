@@ -2,15 +2,16 @@ import "./App.css";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
+import SmoothScroll from "./components/SmoothScroll";
 
 function App() {
   return (
     <>
-      <div className="home">
+      <SmoothScroll>
         <Navbar />
         <LandingPage />
         <Footer />
-      </div>
+      </SmoothScroll>
     </>
   );
 }

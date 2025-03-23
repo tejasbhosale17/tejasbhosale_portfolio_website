@@ -1,6 +1,7 @@
 import profileImg from "../assets/profile-img-2.png";
 import ScrollFloat from "./IntroScrollReveal";
 import IntroScrollReveal from "./IntroScrollReveal";
+
 import ProjectsCarousel from "./ProjectsCarousal";
 import Rough, { WelcomeScrollVelocity } from "./Rough";
 import ScrollVelocity from "./ScrollVelocity";
@@ -55,11 +56,6 @@ const LandingPage = () => {
         />
       </div>
       <div className="small-heading-scroll">
-        {/* <ScrollVelocity
-          texts={["ABOUT"]}
-          velocity={velocity}
-          className="custom-scroll-text"
-        /> */}
         <ScrollVelocity
           texts={["ABOUT"]}
           velocity={100}
@@ -69,21 +65,23 @@ const LandingPage = () => {
           direction="left"
         />
       </div>
-      <div className="projects-section">
-        <ProjectsCarousel />
-      </div>
-      <div className="intro-reveal-section">
-        {/* <IntroScrollReveal
-          baseOpacity={0}
-          enableBlur={true}
-          baseRotation={5}
-          blurStrength={10}
+
+      {/* <div className="intro-reveal-section">
+        <ScrollFloat
+          animationDuration={1}
+          ease="back.inOut(2)"
+          scrollStart="center bottom+=50%"
+          scrollEnd="bottom bottom-=40%"
+          stagger={0.01}
         >
-          When does a man die? When he is hit by a bullet? No! When he suffers a
-          disease? No! When he ate a soup made out of a poisonous mushroom? No!
-          A man dies when he is forgotten!
-        </IntroScrollReveal> */}
-      </div>
+          Hi, I'm Tejas Bhosale, a passionate Java Full Stack Developer with 2
+          years of experience, specializing in React, Spring Boot, and AWS. I
+          have a strong foundation in Data Structures and Algorithms, and I
+          actively contribute to open source. Currently, I'm preparing for my
+          Master's in Computer Science at Syracuse University while working on
+          innovative projects like Interview AI and my portfolio website.
+        </ScrollFloat>
+      </div> */}
       <div className="small-heading-scroll">
         <ScrollVelocity
           texts={["WHY ME"]}
@@ -93,6 +91,9 @@ const LandingPage = () => {
           scrollerClassName="scroller"
           direction="left"
         />
+      </div>
+      <div className="projects-section">
+        <ProjectsCarousel />
       </div>
     </div>
   );
