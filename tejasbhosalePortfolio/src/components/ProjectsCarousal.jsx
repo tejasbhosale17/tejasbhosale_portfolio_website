@@ -27,7 +27,7 @@ const ProjectsCarousal = () => {
           <div data-theme="light" className="div-block-161">
             <div className="why_heading_wrapper">
               <h3 className="condesed_title">
-                Consistent from concept to launch
+                Working on creating better tomorrow
               </h3>
               <div className="div-block-295">
                 <div

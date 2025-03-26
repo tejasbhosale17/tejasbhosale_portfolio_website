@@ -92,9 +92,9 @@ const LandingPage = () => {
           direction="left"
         />
       </div>
-      <div className="projects-section">
+      {/* <div className="projects-section">
         <ProjectsCarousel />
-      </div>
+      </div> */}
     </div>
   );
 };
